@@ -39,6 +39,17 @@ p {
     margin: 40px 0;
 }
 
+.icon-side{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    background: #1e2a3a;
+    color: #fff;
+    padding: 5px 5px 5px 10px;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    z-index: 2;
+}
+
 
 /* Style Sidebar */
 
@@ -54,47 +65,42 @@ p {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #162231;
-    color: #fff;
     transition: all 0.3s;
 }
 
-.icon-side{
-    position: absolute;
-    top: 15px;
-    right: 0;
-    background: #1e2a3a;
-    color: #fff;
-    padding: 5px 5px 5px 10px;
-    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
-    z-index: 2;
-}
-
-#sidebar.active {
-    margin-left: -300px;
-}
-
-#sidebar .sidebar-header {
+#sidebar #sidebar-header {
     padding: 15px;
     background: #1e2a3a;
     text-align: center;
 }
 
-.sidebar-header .profile-image{
+#sidebar #sidebar-content{
+    background: #24364e;
+    padding: 10px 10px 10px 55px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+#sidebar #sidebar-footer{
+    background: #24364e;
+}
+
+#sidebar-header .profile-image{
     max-width: 160px;
 }
 
-.sidebar-header h4{
+#sidebar-header h4{
     font-size: 20px;
+    color: #fff;
 }
 
-.sidebar-header p{
+#sidebar-header p{
     font-size: 12px;
     color: #fff;
     line-height: 1.6;
 }
 
-.social-list a{
+#sidebar-header .social-list a{
     width: 40px;
     height: 40px;
     padding-top: 7px !important;
@@ -108,44 +114,37 @@ p {
     background-color: #1e2a3a;
 }
 
-.list-inline-item{
+#sidebar-header .list-inline-item{
     display:inline-block
 }
 
-.list-inline-item:not(:last-child){
+#sidebar-header .list-inline-item:not(:last-child){
     margin-right:.5rem
 }
 
-.list-menu{
-    padding: 20px;
-    margin-left: 50px;
+#sidebar-header ul li a.icon-style{
+    text-decoration: none;
+    background: rgb(97, 97, 97);
 }
 
-ul.list-menu li.active a{
-    color: #54B689 !important;
+#sidebar-header ul li a.icon-style:hover{
+    background: teal;
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    background: #162231;
-    text-align: center;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
+#sidebar-content ul li a {
     padding: 5px;
     text-decoration: none;
     display: block;
-    color: #d6d6d6;
+    color: #fff;
     font-weight: 600;
 }
 
-#sidebar ul li a:hover{
-    color: #54B689;
+#sidebar-content .list-menu li.active a{
+    color: teal;
+}
+
+#sidebar-content .list-menu li a:hover{
+    color: teal;
 }
 
 a[data-toggle="collapse"] {
